@@ -1,103 +1,112 @@
-# 🐢 Turtle Interactive Games
+# 🐍 Snake Game
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![Turtle Graphics](https://img.shields.io/badge/Turtle-Graphics-green.svg)](https://docs.python.org/3/library/turtle.html)
-[![100 Days of Code](https://img.shields.io/badge/100%20Days%20of%20Code-Day%2019-orange.svg)](https://www.udemy.com/course/100-days-of-code/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+A classic Snake Game built with Python's Turtle Graphics module! Control the snake to eat food, grow longer, and avoid collisions in this nostalgic arcade experience.
 
-> Day 19 of **Angela Yu's 100 Days of Code Challenge** - Interactive turtle graphics games featuring keyboard controls and competitive racing!
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)
+![Turtle](https://img.shields.io/badge/Turtle-Graphics-4CAF50?style=flat-square)
+![100 Days of Code](https://img.shields.io/badge/100%20Days%20of%20Code-Day%2021-FF6B35?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-2196F3?style=flat-square)
 
-## 🎮 Games Included
+**Day 21 of Angela Yu's 100 Days of Code Challenge** - Interactive turtle graphics games featuring keyboard controls and competitive racing!
 
-### 1. 🎨 Etch-A-Sketch Game (`main.py`)
-Create digital art with keyboard-controlled turtle movement!
+## 🎮 Game Features
 
-**Controls:**
-- 🔼 **W** - Move Forward
-- 🔽 **S** - Move Backward  
-- ◀️ **A** - Turn Left
-- ▶️ **D** - Turn Right
-- 🧹 **C** - Clear Screen
-- 🖱️ **Click** - Exit Program
+- 🕹️ **Classic Gameplay** - Navigate your snake to eat food and grow
+- 🌈 **Colorful Food** - Random colored food items for visual appeal  
+- 📊 **Live Scoring** - Real-time score tracking and display
+- ⚡ **Smooth Controls** - Responsive arrow key movement
+- 💥 **Collision Detection** - Wall and self-collision game mechanics
+- 🎯 **Progressive Difficulty** - Snake gets longer as you eat more food
 
-### 2. 🏁 Turtle Race Game (`turtle_race.py`)
-Bet on your favourite turtle and watch them compete!
+## 🚀 How to Play
 
-**Features:**
-- 🎯 Place bets on 6 different coloured turtles
-- 🌈 Available colours: Red, Orange, Yellow, Green, Blue, Purple
-- 🎲 Random movement system for unpredictable races
-- 🏆 Win/Loss detection based on your bet
+1. **Start the Game** - Run `python main.py`
+2. **Control the Snake** - Use arrow keys to move:
+   - ⬆️ **Up Arrow** - Move Up
+   - ⬇️ **Down Arrow** - Move Down  
+   - ⬅️ **Left Arrow** - Move Left
+   - ➡️ **Right Arrow** - Move Right
+3. **Objective** - Eat the colorful food to grow and increase your score
+4. **Avoid** - Don't hit the walls or your own tail!
+5. **Exit** - Click anywhere on the screen to close the game
 
-## 🚀 Getting Started
+## 🛠️ Installation & Setup
 
-### Prerequisites
-- Python 3.x installed on your system
-- Built-in `turtle` module (comes with Python)
+```bash
+# Clone the repository
+git clone https://github.com/qusai-Kagalwala/snake-game.git
 
-### Installation & Running
+# Navigate to project directory
+cd snake-game
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/qusai-Kagalwala/turtle-interactive-games.git
-   cd turtle-interactive-games
-   ```
+# Run the game (Python 3.x required)
+python main.py
+```
 
-2. **Run Etch-A-Sketch Game**
-   ```bash
-   python main.py
-   ```
+> **Note**: This game uses Python's built-in `turtle` module, so no additional packages need to be installed!
 
-3. **Run Turtle Race Game**
-   ```bash
-   python turtle_race.py
-   ```
+## 📁 Project Structure
 
-## 📸 Screenshots
+```
+snake-game/
+├── main.py         # 🎮 Main game loop and setup
+├── snake.py        # 🐍 Snake class (movement, growth, controls)
+├── food.py         # 🍎 Food class (random generation, colors)
+├── scoreboard.py   # 📊 Scoreboard class (score tracking, display)
+└── README.md       # 📖 Project documentation
+```
 
-### 🎨 Etch-A-Sketch in Action
-*Use WASD keys to create beautiful drawings!*
+## 🧩 Code Architecture
 
-### 🏁 Turtle Race Excitement  
-*Watch 6 coloured turtles compete for victory!*
+The game follows **Object-Oriented Programming** principles with four main components:
 
-## 🛠️ Technical Features
+- **🎯 Main Game Loop** (`main.py`) - Coordinates all game elements and handles the game state
+- **🐍 Snake Class** (`snake.py`) - Manages snake creation, movement, growth, and direction controls
+- **🍎 Food Class** (`food.py`) - Handles food generation, positioning, and visual variety
+- **📊 Scoreboard Class** (`scoreboard.py`) - Tracks and displays the player's score and game over messages
 
-- **Event Handling**: Keyboard input detection and processing
-- **Game Loops**: Continuous race simulation with win conditions
-- **User Input**: Interactive betting system with input validation
-- **Object-Oriented**: Multiple turtle instances with individual properties
-- **Random Generation**: Unpredictable race outcomes using random movement
+## 🎨 Game Mechanics
 
-## 📚 Learning Outcomes
+- **Movement**: Snake moves continuously in the current direction
+- **Food Collision**: When snake head is within 15 pixels of food, score increases and snake grows
+- **Wall Collision**: Game ends if snake hits any boundary (±280 pixels)
+- **Self Collision**: Game ends if snake head touches any part of its body
+- **Speed**: Game runs at 10 FPS with 0.1-second intervals
 
-✅ **Turtle Graphics Mastery**  
-✅ **Event-Driven Programming**  
-✅ **Game Loop Implementation**  
-✅ **User Input Handling**  
-✅ **List Management & Iteration**  
-✅ **Conditional Logic & Control Flow**
+## 🏆 Learning Outcomes
 
-## 🎯 Course Progress
+This project demonstrates:
+- ✅ Object-Oriented Programming in Python
+- ✅ Game loop implementation
+- ✅ Event handling and keyboard input
+- ✅ Collision detection algorithms  
+- ✅ Graphics programming with Turtle
+- ✅ Modular code organization
 
-This project is part of Angela Yu's comprehensive **100 Days of Code** Python Bootcamp:
-- **Day 19**: Instances, State and Higher Order Functions
-- **Focus**: Interactive programs with user input and event handling
-- **Skills**: Turtle graphics, keyboard controls, game development basics
+## 🎓 About
 
-## 👨‍💻 Author
+This project is part of **Angela Yu's 100 Days of Code Challenge** (Day 21/22), focusing on building games with Python's Turtle Graphics module.
 
-**Qusai Kagalwala**
-- 📧 Email: qusai.kagalwala53@gmail.com
-- 🐙 GitHub: [@qusai-Kagalwala](https://github.com/qusai-Kagalwala)
-- 💼 LinkedIn: [qusai-kagalwala](https://www.linkedin.com/in/qusai-kagalwala/)
+## 🤝 Contributing
+
+Feel free to fork this repository and submit pull requests for improvements! Some ideas:
+- 🎵 Add sound effects
+- 🏆 Implement high score system
+- 🎨 Add different themes/skins
+- ⚙️ Add difficulty levels
+- 📱 Mobile-friendly version
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🔗 Connect
+
+**Qusai Kagalwala**
+- 💼 [LinkedIn](https://www.linkedin.com/in/qusai-kagalwala/)
+- 🐙 [GitHub](https://github.com/qusai-Kagalwala)
+- 📧 qusai.kagalwala53@gmail.com
+
 ---
 
-⭐ **Star this repository if you found it helpful!** ⭐
-
-*Happy Coding! 🐍✨*
+⭐ **Star this repository if you enjoyed the game!** ⭐
